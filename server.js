@@ -9,6 +9,9 @@ app.set('view engine', 'ect');
 app.engine('ect', ectRenderer.render);
 
     app.use('/', routes);
+    app.use(express.static('public'));
+
+
 
 app.listen(3000, function(){
 console.log('Listening on port 3000');
